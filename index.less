@@ -29,7 +29,7 @@ atom-text-editor, :host {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: #fba0e3;
+    color: @color-purple;
   }
 
   .invisible {
@@ -101,8 +101,8 @@ atom-text-editor, :host {
 }
 
 .bracket-matcher .region {
-  border-bottom: 1px solid #f8de7e;
-  margin-top: -1px;
+  border-bottom: 3px solid @color-yellow-deep;
+  margin-top: 1px;
   opacity: .7;
 }
 
@@ -180,7 +180,7 @@ atom-text-editor, :host {
     }
 
     &.group {
-      color: #C6A24F;
+      color: @color-orange;
       background-color: rgba(255, 255, 255, 0.06);
     }
 
@@ -214,22 +214,11 @@ atom-text-editor, :host {
   &.function {
     color: @syntax-color-function;
   }
-
-  &.constant {
-    color: @syntax-color-entity;
-  }
-
-  &.type.property-name.css {
-    color: @syntax-color-property;
-  }
 }
 
 .source .entity.name.tag,
 .source .punctuation.tag {
   color: @syntax-color-keyword;
-}
-.source .entity.other.attribute-name {
-  color: @syntax-color-variable;
 }
 
 .entity {
@@ -264,12 +253,12 @@ atom-text-editor, :host {
   &.tag .name,
   &.tag.inline .name,
   &.tag > .punctuation {
-    color: @syntax-color-keyword;
+    color: @syntax-color-tag;
   }
 
   &.selector.css .entity.name.tag {
     text-decoration: underline;
-    color: @syntax-color-keyword;
+    color: @syntax-color-tag;
   }
 
   &.selector.css .entity.other.attribute-name.tag.pseudo-class {
@@ -291,11 +280,6 @@ atom-text-editor, :host {
 
   &.preprocessor.at-rule .keyword.control.at-rule {
     color: #8693A5;
-  }
-
-  &.property-value .support.constant.named-color.css,
-  &.property-value .constant {
-    color: #87C38A;
   }
 
   &.constructor.argument.css {
@@ -361,7 +345,14 @@ atom-text-editor, :host {
 
 .coffee {
   .variable {
-    color: @syntax-text-color;
+    // color: @syntax-text-color;
+
+    .key-value {
+      color: @syntax-color-operator;
+    }
+  }
+  .variable.instance {
+    color: @syntax-color-attribute;
   }
   .brace.square,
   .brace.curly {
@@ -376,5 +367,33 @@ atom-text-editor, :host {
   }
   .parameter {
     font-weight: normal;
+  }
+}
+
+.css {
+  .entity.other.attribute-name .punctuation,
+  .entity.other.attribute-name {
+    color: @syntax-color-attribute;
+  }
+  .parent-selector.entity.attribute-name .punctuation {
+    color: @color-orange-light;
+  }
+
+  .brace,
+  .terminator,
+  .separator.key-value,
+  .property-list {
+    color: @color-gray;
+  }
+
+  .support.type.property-name {
+    color: @syntax-color-property;
+  }
+}
+
+.stylus {
+  .entity.other.attribute-name .punctuation,
+  .entity.other.attribute-name {
+    color: @syntax-color-attribute;
   }
 }

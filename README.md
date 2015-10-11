@@ -2,4 +2,4 @@
 
 A dark syntax theme for Atom.
 
-It is a forc of Dark Syntax theme.
+It is a fork of Dark Syntax theme.
