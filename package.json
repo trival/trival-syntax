@@ -1,0 +1,11 @@
+{
+  "name": "trival-syntax",
+  "theme": "syntax",
+  "version": "0.27.0",
+  "description": "A dark theme for syntax",
+  "repository": "",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

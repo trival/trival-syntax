@@ -1,0 +1,68 @@
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+@color-purple: #dc79dc;
+@color-purple-deep: #f050b1;
+@color-purple-light: #e0b8f7;
+@color-turquoise: #60d0d0;
+@color-turquoise-light: #a6d0d9;
+@color-blue: #90b6eE;
+@color-blue-deep: #62B1FE;
+@color-green-deep: #A8FF60;
+@color-green: #a0d970;
+@color-orange: #fFc979;
+@color-orange-light: #e6c999;
+@color-orange-deep: #f6a022;
+@color-yellow: #F9EE98;
+@color-yellow-deep: #F9ef28;
+@color-red: #F98099;
+@color-red-deep: #dd506f;
+@color-gray: #62626C;
+@color-gray-light: #82829C;
+
+// General colors
+@syntax-text-color: #c5c8ca;
+@syntax-cursor-color: white;
+@syntax-selection-color: #334;
+@syntax-selection-flash-color: #eee;
+@syntax-background-color: #1d1f21;
+
+// Guide colors
+@syntax-wrap-guide-color: rgba(197, 200, 198, .1);
+@syntax-indent-guide-color: rgba(197, 200, 198, .2);
+@syntax-invisible-character-color: rgba(197, 200, 198, .2);
+
+// For find and replace markers
+@syntax-result-marker-color: #888;
+@syntax-result-marker-color-selected: white;
+
+// Gutter colors
+@syntax-gutter-text-color: @syntax-text-color;
+@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+@syntax-gutter-background-color: lighten(@syntax-background-color, 5%);
+@syntax-gutter-background-color-selected: rgba(255, 255, 255, 0.14);
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @color-blue;
+@syntax-color-added: @color-green-deep;
+@syntax-color-modified: @color-orange;
+@syntax-color-removed: @color-red-deep;
+
+// For language entity colors
+@syntax-color-comment: @color-gray;
+@syntax-color-string: @color-green;
+@syntax-color-entity: @color-red;
+@syntax-color-variable: @color-turquoise-light;
+@syntax-color-constant: @color-purple;
+@syntax-color-property: @color-turquoise;
+@syntax-color-keyword: @color-turquoise;
+@syntax-color-operator: @color-turquoise;
+@syntax-color-value: @color-yellow;
+@synatx-color-support: @color-blue;
+@syntax-color-function: @color-orange-light;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: @color-blue-deep;
+@syntax-color-tag: @color-blue-deep;
+@syntax-color-attribute: @color-turquoise-light;
+@syntax-color-import: @color-turquoise;
+@syntax-color-snippet: @color-purple;
+@syntax-color-error: @color-purple-deep;
