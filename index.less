@@ -114,7 +114,6 @@ atom-text-editor, :host {
   color: @syntax-color-entity;
 
   &.name.type {
-    text-decoration: underline;
     color: @synatx-color-support;
   }
 
@@ -309,6 +308,10 @@ atom-text-editor, :host {
 
 .js {
   .variable,
+  .accessor,
+  &.function .method,
+  &.function .storage,
+  &.function-call .function,
   &.function .function {
     color: @syntax-text-color;
   }
@@ -318,11 +321,14 @@ atom-text-editor, :host {
   &.function .method,
   &.function .storage,
   &.function-call .function {
-    color: @syntax-text-color;
     font-weight: normal;
   }
   &.function .storage {
     color: @syntax-color-keyword;
+  }
+
+  .this {
+    color: @color-purple-light;
   }
 
   .terminator {
@@ -357,6 +363,10 @@ atom-text-editor, :host {
   .brace.square,
   .brace.curly {
     color: @color-blue;
+  }
+  .comma,
+  .brace.round {
+    color: @color-gray-light;
   }
 
   .parameter,
