@@ -308,18 +308,22 @@ atom-text-editor, :host {
 
 .js {
   .variable,
-  .accessor,
+  .accessor {
+    color: @syntax-text-color;
+  }
+
   &.function .method,
   &.function .storage,
   &.function-call .function,
-  &.function .function {
-    color: @syntax-text-color;
+  &.name.function {
+    color: @syntax-color-method;
   }
   &.variable.constant {
     color: @syntax-color-constant;
   }
   &.function .function {
     font-weight: bold;
+    color: @syntax-color-function;
   }
   &.function .method,
   &.function .storage,
@@ -341,6 +345,7 @@ atom-text-editor, :host {
   .comma,
   .brace,
   .punctuation.parameters,
+  &.function-call .function.braces,
   .punctuation.key-value {
     color: @color-gray-light;
   }
