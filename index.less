@@ -321,7 +321,7 @@ atom-text-editor, :host {
   &.variable.constant {
     color: @syntax-color-constant;
   }
-  &.function .function {
+  &.function .function.name {
     font-weight: bold;
     color: @syntax-color-function;
   }
@@ -379,12 +379,32 @@ atom-text-editor, :host {
 
   .parameter,
   .storage.function,
-  .function.entity {
-    color: @color-orange;
+  .function .function {
+    color: @syntax-color-function;
     font-weight: bold;
   }
-  .parameter {
+  .function .parameter {
+    color: @syntax-color-function;
     font-weight: normal;
+  }
+
+  .function {
+    color: @syntax-color-method;
+  }
+}
+
+.clojure {
+  .entity {
+    color: @syntax-color-function;
+    font-weight: bold;
+  }
+  .function {
+    color: @syntax-color-method;
+    font-weight: normal;
+  }
+  .punctuation.vector,
+  .punctuation.map {
+    color: @syntax-color-tag;
   }
 }
 
