@@ -306,7 +306,7 @@ atom-text-editor, :host {
   }
 }
 
-.js {
+.js, .jsx {
   .variable,
   .accessor {
     color: @syntax-text-color;
@@ -331,6 +331,62 @@ atom-text-editor, :host {
     font-weight: normal;
   }
   &.function .storage {
+    color: @syntax-color-keyword;
+  }
+
+  .this {
+    color: @color-purple-light;
+  }
+
+  .terminator {
+    color: @color-gray;
+  }
+
+  .comma,
+  .brace,
+  .punctuation.parameters,
+  &.function-call .function.braces,
+  .punctuation.key-value {
+    color: @color-gray-light;
+  }
+
+
+  .string.unquoted,
+  .parameters {
+    color: @syntax-color-variable;
+  }
+}
+
+.ts, .tsx {
+
+  &.forin {
+    color: @syntax-color-variable;
+  }
+
+  &.type:not(.operator) {
+    color: @color-blue;
+  }
+
+  &.function .method,
+  &.function .storage,
+  &.function-call .function,
+  &.name.function {
+    color: @syntax-color-method;
+  }
+  &.variable.constant {
+    color: @syntax-color-constant;
+  }
+  &.function .function.name {
+    font-weight: bold;
+    color: @syntax-color-function;
+  }
+  &.function .method,
+  &.function .storage,
+  &.function-call .function {
+    font-weight: normal;
+  }
+  &.function .storage,
+  &.type.storage {
     color: @syntax-color-keyword;
   }
 
