@@ -312,18 +312,20 @@ atom-text-editor, :host {
     color: @syntax-text-color;
   }
 
+  &.function .function.name {
+    font-weight: bold;
+    color: @syntax-color-function;
+  }
   &.function .method,
   &.function .storage,
-  &.function-call .function,
+  &.function-call .function.name,
+  &.method-call .function.name,
   &.name.function {
+    font-weight: normal;
     color: @syntax-color-method;
   }
   &.variable.constant {
     color: @syntax-color-constant;
-  }
-  &.function .function.name {
-    font-weight: bold;
-    color: @syntax-color-function;
   }
   &.function .method,
   &.function .storage,
