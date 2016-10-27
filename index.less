@@ -361,32 +361,53 @@ atom-text-editor, :host {
 
 .ts, .tsx {
 
-  &.forin {
+  .variable,
+  .support.node,
+  .support.variable.property {
+    color: @syntax-text-color;
+  }
+
+  .variable.definition,
+  .variable.alias,
+  .variable.parameter,
+  .object-literal.key {
     color: @syntax-color-variable;
   }
 
-  &.type:not(.operator) {
+  .support.variable {
     color: @color-blue;
   }
 
-  &.function .method,
-  &.function .storage,
-  &.function-call .function,
-  &.name.function {
+  .type:not(.operator),
+  .punctuation.typeparameters,
+  .type.operator {
+    color: @color-blue;
+
+    &.entity.class {
+      color: @syntax-color-entity;
+    }
+  }
+
+  .name.function {
     color: @syntax-color-method;
   }
-  &.variable.constant {
+
+  .variable.constant,
+  .support.constant.property {
     color: @syntax-color-constant;
   }
-  &.function .function.name {
+
+  .function.name.definition {
     font-weight: bold;
     color: @syntax-color-function;
   }
+
   &.function .method,
   &.function .storage,
   &.function-call .function {
     font-weight: normal;
   }
+
   &.function .storage,
   &.type.storage {
     color: @syntax-color-keyword;
@@ -396,23 +417,35 @@ atom-text-editor, :host {
     color: @color-purple-light;
   }
 
-  .terminator {
-    color: @color-gray;
-  }
-
-  .comma,
   .brace,
-  .punctuation.parameters,
-  &.function-call .function.braces,
-  .punctuation.key-value {
+  .punctuation,
+  .punctuation.separator {
     color: @color-gray-light;
   }
 
-
-  .string.unquoted,
-  .parameters {
-    color: @syntax-color-variable;
+  .punctuation.comma,
+  .punctuation.terminator {
+    color: @color-gray;
   }
+
+
+  .punctuation.accessor {
+    color: @syntax-text-color;
+  }
+
+  .punctuation.template-expression {
+    color: @syntax-color-entity;
+  }
+
+  .brace.square,
+  .punctuation.binding-pattern {
+    color: @syntax-color-renamed;
+  }
+
+  .punctuation.string {
+    color: @syntax-color-string;
+  }
+
 }
 
 .coffee {
